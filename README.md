@@ -6,14 +6,20 @@ To check how it works you need to:
 1. Clone / download project repository.
 2. Start local game server to download highscores list:
 
-> > (in games-server directory)
+(in games-server directory)
 > > npm install
+<br>
+
 > > npm run start port:8080
+<br>
+
 > > !IMPORTANT you need to pass optional argument for port:8080 to make it work
 
 3. In main directory:
 
 > > npm install
+<br>
+
 > > ng serve
 
 ![screenshot](./intro.png)
