@@ -20,13 +20,15 @@ To check how it works you need to:
 > <br>
 > ng serve
 
+5. Input player name e.g. Player1 and 4 digit auth token e.g. 1234
+
 ![screenshot](./intro.png)
 ![screenshot](./game.png)
 
 Technologies:
 <br>
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,ts,angular)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,ts,angular,express)](https://skillicons.dev)
 
 <br>
 Game core provided by: https://github.com/chrum/ngx-tetris
