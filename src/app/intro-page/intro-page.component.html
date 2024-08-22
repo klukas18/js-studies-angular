@@ -1,0 +1,54 @@
+<body>
+  <section>
+    <img src="assets/tetris_logo.png" alt="tetris logo" />
+    <div class="container">
+      <h1>Welcome Gamer!</h1>
+      <h2>\\ Get ready for a nostalgic experience //</h2>
+      <form [formGroup]="playerForm" (submit)="setPlayerData()">
+        <div>
+          <label for="name">Name:</label>
+          <input
+            formControlName="playerName"
+            type="text"
+            id="name"
+            class="form-control"
+            placeholder="e.g. H34D$h0T420"
+          />
+          <div *ngIf="isPlayerNameInvalid()">
+            Enter a valid name - min. 5 characters.
+          </div>
+          <br />
+        </div>
+        <div>
+          <label for="studentID">Student ID:</label>
+          <input
+            formControlName="studentID"
+            type="text"
+            id="studentID"
+            class="form-control"
+            placeholder="Enter ID"
+          />
+          <div *ngIf="isStudentIDInvalid()">
+            This field is required. Enter 4-digit ID.
+          </div>
+          <br />
+        </div>
+        <div class="colorInput">
+          <label for="selectedColor">Color Palette:</label>
+          <select
+            formControlName="selectedColor"
+            type="text"
+            id="selectedColor"
+          >
+            <option value="normal">Normal</option>
+            <option value="highContrast">Black/White</option>
+          </select>
+        </div>
+        <div class="buttonContainer">
+          <button type="submit" [disabled]="playerForm.invalid">PLAY</button>
+        </div>
+      </form>
+      <h3>// Enter your details to begin \\</h3>
+    </div>
+  </section>
+</body>

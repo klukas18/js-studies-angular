@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "Back to 1982";
+  src: url(../../assets/fonts/back-to-1982.regular.ttf);
+}
+@font-face {
+  font-family: "Public Pixel";
+  src: url(../../assets/fonts/PublicPixel-z84yD.ttf);
+}
+@font-face {
+  font-family: "LCD Phone";
+  src: url(../../assets/fonts/LcdPhone-wgZ2.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  color: rgb(232, 232, 232);
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+  font-family: "LCD Phone", sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  h1 {
+    font-family: "Back to 1982", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  h3 {
+    color: #9b9b9b;
+  }
+  img {
+    position: absolute;
+    top: 5%;
+  }
+}
+.container {
+  box-sizing: border-box;
+  width: 50%;
+  border: 2px solid;
+  animation: rgb 5s linear infinite;
+  border-radius: 25px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+
+  input {
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+  }
+
+  button {
+    margin: 20px 10px;
+    padding: 10px;
+    width: 30%;
+    font-family: "Public Pixel", sans-serif;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgb(58, 58, 58);
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+    transform: scale(1.1);
+    animation: rgb2 10s linear infinite;
+  }
+  button:disabled {
+    animation: none;
+    transform: none;
+    cursor: not-allowed;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+input {
+  &.ng-touched {
+    &.ng-invalid {
+      outline: 1px solid red;
+    }
+  }
+}
+.colorInput {
+  gap: 5px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly visible border */
+  border-radius: 8px; /* Rounded corners */
+  color: white; /* Light text color for contrast */
+
+  label {
+    color: rgba(255, 255, 255, 0.85); /* Light label color with transparency */
+  }
+
+  select {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker and semi-transparent background for select */
+    color: white; /* Light text color for contrast */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Visible border with transparency */
+    -webkit-appearance: none; /* Removes default styling for WebKit browsers */
+    -moz-appearance: none; /* Removes default styling for Mozilla browsers */
+    appearance: none; /* Removes default styling to apply custom styles */
+    padding: 8px;
+    border-radius: 4px; /* Rounded corners for select */
+    &:focus {
+      outline: none;
+      border-color: #007bff; /* Highlight color on focus */
+    }
+  }
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes rgb {
+  0% {
+    border-color: rgb(255, 0, 0);
+  }
+  33% {
+    border-color: rgb(0, 255, 0);
+  }
+  66% {
+    border-color: rgb(0, 0, 255);
+  }
+  100% {
+    border-color: rgb(255, 0, 0);
+  }
+}
+
+@keyframes rgb2 {
+  0% {
+    background-color: rgb(255, 0, 0);
+  }
+  33% {
+    background-color: rgb(0, 255, 0);
+  }
+  66% {
+    background-color: rgb(0, 0, 255);
+  }
+  100% {
+    background-color: rgb(255, 0, 0);
+  }
+}
